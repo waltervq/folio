@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: #2121210a;
+    border-bottom: 1px solid #21212118;
+}
+nav{
+    display: flex;
+    width: 84%;
+    margin: 5px;
+    align-items: center;
+    justify-content: space-between;
+    color: #f1f1f1;
+}
+
+nav h3{
+    background-color: #212121;
+    padding: 10px;
+    border-radius: 20px;
+}
+.contener{
+    margin-left: 8%;
+    margin-top: 13%;
+}
+.contener h1{
+    font-size: 35px;
+    color: #212121;
+    margin-bottom: 20px;
+}
+span{
+    color: rgb(23, 107, 185);
+}
+.contener p{
+    color: rgb(70, 66, 66);
+    line-height: 20px;
+}
+.contener a{
+    background-color: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffff;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+.picture{
+    width: 20%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+.picture img{
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    transform: translateX(-49%);
+}
+.picture:hover .blue{
+    bottom: 5px;
+}
+.picture .moi{
+    filter: drop-shadow(-5px -10px 4px rgba(236, 236, 240, 0.527));
+}
+.picture:hover .moi{
+    left: 5px;
+}
+.navigation{
+    display: none;
+}
+.navibg{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-image: radial-gradient(#8fa6c9,#06216d);
+    z-index: 1000;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.checkbox{
+    background-color: #ffff;
+    height: 4rem;
+    width: 4rem;
+    position: fixed;
+    top: .5rem;
+    right: .5rem;
+    border-radius: 50%;
+    z-index: 2000;
+    text-align: center;
+    cursor: pointer;
+}
+.checkbox:hover{
+     background-color: #7e2828;
+}
+.navi_icon{
+    position: relative;
+    margin-top: 1.9rem;
+    width: 1.5rem;
+    height: 1px;
+    background-color: #212121;
+    display: inline-block;
+}
+.navi_icon::before,
+.navi_icon::after{
+    width: 1.5rem;
+    height: 1px;
+    background-color: #212121;
+    display: inline-block;
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s;
+}
+.navi_icon::before{
+    top: -.5rem;
+}
+.navi_icon::after{
+    top: .5rem;
+}
+.present{
+    position: fixed;
+    z-index: 1500;
+    opacity: 0;
+    top: 40px;
+    text-align: center;
+    padding-left: 20px;
+    display: inline-block;
+    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.present p{
+    color: #43454e;
+}
+.present h1{
+    background-color: #212121c9;
+    border-radius: 25px;
+}
+.navili{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style-type: none;
+    text-align: center;
+    width: 100%;
+}
+.navigation:checked ~ .navibg{
+    transform: scale(90);
+}
+.navigation:checked ~ .present{
+    opacity: 1;
+}
